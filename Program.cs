@@ -1,23 +1,14 @@
 ﻿class NumberManpulator
 {
-    static double three()
+    static double calc(double a,double b)
     {
-        double sinthree = Math.Sin(3)+Math.Sqrt(3);
-        return sinthree;
-    }
-    static double five()
-    {
-        double costfive = (Math.Cos(5)+Math.Sqrt(5));
-        return costfive;
-    }
+        return (Math.Sin(a)+Math.Sqrt(a))/(Math.Cos(b)+Math.Sqrt(b));
 
+    }
     static void Main(string[] args)
     {
-        double x = NumberManpulator.three()/NumberManpulator.five() * NumberManpulator.three()/(Math.Cos(7)+Math.Sqrt(7)) * (Math.Sin(5)+Math.Sqrt(5))/NumberManpulator.five();
+        double x = NumberManpulator.calc(3,5)*NumberManpulator.calc(3,7)*NumberManpulator.calc(5,5);
         Console.WriteLine(Math.Round(x,3));
 
     }
 }
-
-
-//double x = (Math.Sin(3)+Math.Sqrt(3))/(Math.Cos(5)+Math.Sqrt(5)) * (Math.Sin(3)+Math.Sqrt(3))/(Math.Cos(7)+Math.Sqrt(7)) * (Math.Sin(5)+Math.Sqrt(5))/(Math.Cos(5)+Math.Sqrt(5));
